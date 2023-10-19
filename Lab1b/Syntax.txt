@@ -1,0 +1,23 @@
+Syntax:	
+	- declaration: 	type Identifier|Identifier1...IdentifierN"."
+	- type1: 	"let"|"num"|"wrd"
+	- arraydecl: 	type1 "arr""["nr"]"
+	- type: 	type1|arraydecl
+	- negation: 	"not" stmt|condition|operator
+	- cmpndstmt:	tabbed stmtlist
+	- stmtlist:	stmt | stmt "\n" stmtlist
+	- stmt:		simplstmt|structstmt
+	- simplstmt:	assignstmt|iostmt
+	- assignstmt:	expression ">" Identifier
+	- expression:	expression ("+"|"-") term|term
+	- term:		term ("*"|"/"|"mod") factor|factor
+	- factor:	"("expression")"|Identifier|nr
+	- iostmt:	">"|"<" Identifier
+	- structstmt:	cmpndstmt|ifstmt|whilestmt
+	- ifstmt: 	"?" condition stmt [elseifstmt|elsestmt]
+	- elseifstmt:	":" condition stmt [elseifstmt|elsestmt]
+	- elsestmt: 	":" stmt
+	- whilestmt:	"->" condition stmt
+	- dowhilestmt:	"->" stmt condition"."	
+	- condition:	expression relation expression
+	- relation:	"lt"|"le"|"eq"|"ge"|"gt"

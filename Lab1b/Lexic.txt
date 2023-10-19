@@ -4,21 +4,10 @@ Alphabet:
 	- decimal digits (0-9)
 
 Lexic:
-	- special symbols, representing:
-		* operators: lt le eq ge gt > + - * / mod
-		* separators: ;[...]; ;; space
-		* reserved symbols: > -> ? : .
-		* reserved words: let num wrd arr
-	- identifiers:
-		* a sequence of letters, digits and underline characters, such that the first character is a letter or an underline character
-			letter 			- (a-z)|(A-Z)
-			digit 			- (0-9)
-			underline character 	- _
+	- tokens: (file token.in)
 	- constants:
 		* integer: 		"+"nr | "-"nr | nr > cnum
 		* character/string: 	'letter/string' | 'digit/number' > cwrd
 
 Syntax:
-	- Sintactical rules: (file Syntax.in)
-	
-			
+	- Sintactical rules: (file Syntax.txt)
