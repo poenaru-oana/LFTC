@@ -4,7 +4,7 @@ Alphabet:
 	- decimal digits (0-9)
 
 Lexic:
-	- tokens: (file token.in)
+	- tokens: (file Token.txt)
 	- constants:
 		* integer: 		"+"nr | "-"nr | nr > cnum
 		* character/string: 	'letter/string' | 'digit/number' > cwrd
