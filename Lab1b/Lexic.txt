@@ -5,9 +5,18 @@ Alphabet:
 
 Lexic:
 	- tokens: (file Token.txt)
+	- identifiers:
+		* a sequence of letters, digits and underline characters, such that the first character is a letter or an underline character
+			identifier =		letter|letter{letter}{digit}
+			letter =		"A"|"B"|...|"Z"|"a"|"b"|...|"z"
+			digit =			"0"|"1"|...|"9"
+			underline character = 	"_"
 	- constants:
-		* integer: 		"+"nr | "-"nr | nr > cnum
-		* character/string: 	'letter/string' | 'digit/number' > cwrd
+		* integer:		cnum =	"+"nr|"-"nr|nr 
+					nr =	digit{nr}
+		* character/string: 	cwrd =	"str"
+					str =	char{str}
+					char =	letter|digit
 
 Syntax:
 	- Sintactical rules: (file Syntax.txt)

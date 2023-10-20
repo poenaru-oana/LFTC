@@ -1,0 +1,62 @@
+<<Lexic.txt>>
+
+Alphabet: 
+	- upper (A-Z) and lower case letters (a-z) of the English alphabet
+	- underline character '_'
+	- decimal digits (0-9)
+
+Lexic:
+	- tokens: (file Token.txt)
+	- identifiers:
+		* a sequence of letters, digits and underline characters, such that the first character is a letter or an underline character
+			identifier =		letter|letter{letter}{digit}
+			letter =		"A"|"B"|...|"Z"|"a"|"b"|...|"z"
+			digit =			"0"|"1"|...|"9"
+			underline character = 	"_"
+	- constants:
+		* integer:		cnum =	"+"nr|"-"nr|nr 
+					nr =	digit{nr}
+		* character/string: 	cwrd =	"str"
+					str =	char{str}
+					char =	letter|digit
+
+Syntax:
+	- Sintactical rules: (file Syntax.txt)
+
+
+
+<<Syntax.txt>>
+
+Syntax:	
+	- declaration = type Identifier"."|type Identifier1 Identifier2 ... IdentifierN"."
+	- type1 =	"let"|"num"|"wrd"
+	- arraydecl = 	type1 "arr""["nr"]"
+	- type = 	type1|arraydecl
+	- negation = 	"not" stmt|condition|operator
+	- cmpndstmt =	tabbed stmtlist
+	- stmtlist =	stmt | stmt "\n" stmtlist
+	- stmt =	simplstmt|structstmt
+	- simplstmt =	assignstmt|iostmt
+	- assignstmt =	expression ">" Identifier
+	- expression =	term|expression "+" term|expression "-" term
+	- term =	factor|term "*" factor|term "/" factor|term "mod" factor
+	- factor =	Identifier|Constant|"("expression")"
+	- iostmt =	">" Identifier|"<" Identifier
+	- structstmt =	cmpndstmt|ifstmt|whilestmt
+	- ifstmt = 	"?" condition stmt [elseifstmt|elsestmt]
+	- elseifstmt =	":" condition stmt [elseifstmt|elsestmt]
+	- elsestmt = 	":" stmt
+	- whilestmt =	"->" condition stmt
+	- dowhilestmt =	"->" stmt condition"."	
+	- condition =	expression relation expression
+	- relation =	"lt"|"le"|"eq"|"ge"|"gt"
+
+
+
+<<Token.txt>>
+
+Tokens:	
+	- operators = 		"lt"|"le"|"eq"|"ge"|"gt"|">"|"+"|"-"|"*"|"/"|"mod"|"not"
+	- separators =		";"|";;"|" "|"<tab>"
+	- reserved symbols =	">"|"<"|"->"|"?"|":"|"."
+	- reserved words =	"let"|"num"|"wrd"|"arr"|"cnum"|"cwrd"

@@ -1,0 +1,84 @@
+p1 -max of 3 nums-:
+
+let a b c.
+> a
+> b
+> c
+
+? a ge b
+    a ge c => a
+    => c
+:
+    b ge c => b
+    => c
+
+------------------------------
+
+p2 -is number prime-:
+
+let n.
+> n
+
+? n le 1
+    => false
+: n eq 2
+    => true
+: n mod 2
+    => false
+:
+    let i.
+    3 > i
+    i -> i*i eq n, +2 > i
+        ? n mod i
+	    => false
+
+=> true
+
+-------------------------------
+
+p3 -sum of n numbers-:
+
+let n x sum.
+0 > sum
+> n
+
+let i.
+1 > i
+i -> i eq n, +1 > i
+    > x
+    +x > sum
+
+--------------------------------
+
+perr -sum of 3 numbers- (illegal characters and unmatched string):
+-- illegal character [ appears at end of statement
+-- ; comment block not closed
+
+
+let a b c sum.
+0 > sum[
+> a
+> b
+> c
+
+; computing sum
+a + b + c > sum
+
+--------------------------------
+
+________________LEGEND___________________
+
+let variable. 			--> variable declaration (not typesafe)
+> 				--> input from user
+value/expression > variable 	--> variable = value/expression (assignment)
+var1 ge/gt/le/lt/eq var 2	--> relational operators
+? (not) condition		--> if condition (not) true
+: condition			--> else if condition (not) true
+:				--> else
+var -> cond, step(assignment)	--> for var from initial (defined before) until cond, moving with step
+-> (not) cond			--> while (not) condition
+-> [...] (not) cond.		--> do while (not) condition
+;;				--> one line comment
+; [...] ;			--> multiline comment
+
+

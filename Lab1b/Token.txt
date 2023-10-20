@@ -1,11 +1,5 @@
 Tokens:	
-	- special symbols, representing:
-		* operators: lt le eq ge gt > + - * / mod not
-		* separators: ;[...]; ;; space
-		* reserved symbols: > < -> ? : .
-		* reserved words: let num wrd arr cnum cwrd
-	- identifiers:
-		* a sequence of letters, digits and underline characters, such that the first character is a letter or an underline character
-			letter 			- (a-z)|(A-Z)
-			digit 			- (0-9)
-			underline character 	- _
+	- operators = 		"lt"|"le"|"eq"|"ge"|"gt"|">"|"+"|"-"|"*"|"/"|"mod"|"not"
+	- separators =		";"|";;"|" "|"<tab>"
+	- reserved symbols =	">"|"<"|"->"|"?"|":"|"."
+	- reserved words =	"let"|"num"|"wrd"|"arr"|"cnum"|"cwrd"
