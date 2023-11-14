@@ -1,5 +1,0 @@
-Tokens:	
-	- operators = 		"lt"|"le"|"eq"|"ge"|"gt"|">"|"+"|"-"|"*"|"/"|"mod"|"not"
-	- separators =		";"|";;"|" "|"<tab>"
-	- reserved symbols =	">"|"<"|"->"|"?"|":"|"."
-	- reserved words =	"let"|"num"|"wrd"|"arr"|"cnum"|"cwrd"
