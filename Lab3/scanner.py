@@ -1,14 +1,9 @@
 import re
-import os
-from symbolTable import SymbolTable
-from typing import List
 from symbolTable import SymbolTable
 from hashTable import HashTable
 
-
 class ScannerException(Exception):
     pass
-
 
 class Scanner:
     def __init__(self):

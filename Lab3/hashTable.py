@@ -13,7 +13,7 @@ class HashTable:
         return self.size
 
     def hash(self, key):
-        if (type(key) == str):
+        if type(key) == str:
             total = 0
             for char in key:
                 total += ord(char)
@@ -39,9 +39,9 @@ class HashTable:
         return None
 
     def toString(self):
-        String = ""
+        string = ""
         for index, list in enumerate(self.items):
             for entry in list:
-                String = String + f"{entry}        - at hashed value -       {index} \n "
+                string = string + f"{entry}        - at hashed value -       {index} \n "
 
-        return String
+        return string

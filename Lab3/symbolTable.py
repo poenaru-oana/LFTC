@@ -30,14 +30,5 @@ class SymbolTable:
     def hasStringConstant(self, identifier):
         return self.stringConstantsHashTable.contains(identifier)
 
-    # def findPositionIdentifier(self, identifier):
-    #     return self.identifiersHashTable.contains(identifier)
-
-    # def findPositionIntConstant(self, constant):
-    #     return self.intConstantsHashTable.contains(constant)
-
-    # def findPositionStringConstant(self, constant):
-    #     return self.stringConstantsHashTable.contains(constant)
-
     def toString(self):
         return " IDENTIFIERS: \n " + self.identifiersHashTable.toString() + " INT CONSTANTS: \n " + self.intConstantsHashTable.toString() + " STRING CONSTANTS: \n " + self.stringConstantsHashTable.toString()
