@@ -42,8 +42,6 @@ class Scanner:
 
     def tokenize(self, tokensToBe):
         resultedTokens = []
-        # valueLocationPair = []
-        # locationPair = []
 
         isStringConstant = False
         createdString = ""
@@ -111,7 +109,7 @@ class Scanner:
                     self.PIF.append([[token, [-1, -1]], 3])
                 elif token in self.separators:
                     self.PIF.append([[token, [-1, -1]], 4])
-                elif token[0] == "'" and token[len(token) - 1] == "'":
+                elif token[0] == "\"" and token[len(token) - 1] == "\"":
                     index = self.symbolTable.addStringConstant(token)
                     self.PIF.append([["SC", index], 0])
                 elif token.isnumeric():
@@ -125,7 +123,6 @@ class Scanner:
                     locationPair = entry[1]
                     lexical_error_exists.append(
                         f"Error at line {locationPair[0]}, word {locationPair[1]}, invalid token {token} \n")
-                    # raise ScannerException(f"Error at line {locationPair[0]} and column {locationPair[1]}, invalid token {token}")
 
         except (IOError, ScannerException) as e:
             print(str(e))
