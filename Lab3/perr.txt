@@ -1,0 +1,8 @@
+var a b c sum
+0 > sum&
+> a
+> b
+> c
+
+; computing sum
+a + b + c > sum

@@ -1,0 +1,9 @@
+var n x sum
+0 > sum
+> n
+
+var i
+1 > i
+i -> i eq n, +1 > i
+    > x
+    +x > sum

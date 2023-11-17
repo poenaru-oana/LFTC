@@ -1,0 +1,17 @@
+var n
+> n
+
+? n le 1
+    => false
+: n eq 2
+    => true
+: n mod 2
+    => false
+:
+    var i
+    3 > i
+    i -> i*i eq n, +2 > i
+        ? n mod i
+	    => false
+
+=> true

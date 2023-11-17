@@ -1,0 +1,11 @@
+var a b c
+> a
+> b
+> c
+
+? a ge b
+    a ge c => a
+    => c
+:
+    b ge c => b
+    => c
